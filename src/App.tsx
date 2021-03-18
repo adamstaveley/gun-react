@@ -5,7 +5,7 @@ import { CreateUser } from './components/CreateUser';
 import { GetData } from './components/GetData';
 import { LoginUser } from './components/LoginUser';
 import { ResetPw } from './components/ResetPw';
-import { useGun, UseGunType } from './hooks/useGUN';
+import { UseGunType } from './hooks/useGUN';
 
 export type AppProps = {
   gun: UseGunType;

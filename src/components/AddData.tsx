@@ -11,6 +11,7 @@ export function AddData({ gun, onSubmit, onDone }: AddDataProps) {
     const [document, setDocument] = React.useState<string | undefined>();
     const [key, setKey] = React.useState<string | undefined>();
     const [value, setValue] = React.useState<string | undefined>();
+    const [encryptionKey, setEncryptionKey] = React.useState<string | undefined>();
 
     const addData = async () => {
         onSubmit();
@@ -19,7 +20,7 @@ export function AddData({ gun, onSubmit, onDone }: AddDataProps) {
         }
         const data = { [key]: value }
         console.log('adding', data, 'to', document)
-        const result = await gun.addData(document, key, value);
+        const result = await gun.addData(document, key, value, encryptionKey);
         console.log('got result:', result);
         onDone(result);
     }
@@ -39,6 +40,10 @@ export function AddData({ gun, onSubmit, onDone }: AddDataProps) {
 
                 <label>Value</label>
                 <input onChange={(e) => setValue(e.target.value)} type="text"></input>
+
+                <label>Encrypt?</label>
+                <input onChange={(e) => setEncryptionKey(e.target.value)} type="text"></input>
+
                 <button type="submit">
                     Add data
                 </button>
