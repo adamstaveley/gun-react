@@ -32,14 +32,14 @@ export function GetData({ gun, onSubmit, onDone }: GetDataProps) {
                 <label>Document</label>
                 <input onChange={(e) => setDocument(e.target.value)} type="text"></input>
 
-                <label>Key</label>
+                <label>Key?</label>
                 <input onChange={(e) => setKey(e.target.value)} type="text"></input>
 
                 <label>Decrypt?</label>
                 <input onChange={(e) => setDecryptionKey(e.target.value)} type="text"></input>
 
                 <button type="submit">
-                    Get data
+                    Submit
                 </button>
 
             </form>

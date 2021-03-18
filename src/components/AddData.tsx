@@ -45,7 +45,7 @@ export function AddData({ gun, onSubmit, onDone }: AddDataProps) {
                 <input onChange={(e) => setEncryptionKey(e.target.value)} type="text"></input>
 
                 <button type="submit">
-                    Add data
+                    Submit
                 </button>
             </form>
         </div>
