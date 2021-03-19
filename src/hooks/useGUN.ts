@@ -118,7 +118,7 @@ export function useGun(): UseGunType {
                     }
                     const wallet = Wallet.createRandom()
                     const res = await addData('keys', 'master', wallet.privateKey, password)
-                    if (res == 'Added data!') {
+                    if (res === 'Added data!') {
                         resolve({ok: true, result: wallet.address})
                     } else {
                         resolve({ok: false, result: res})

@@ -31,7 +31,6 @@ export function MagicLinkAuth({ gun }: MagicLinkAuthProps) {
     }, [location]);
 
     React.useEffect(() => {
-        console.log('logged in:', loggedIn)
         if (token) {
             console.log('setting logged in')
             const decoded = jwt.decode(token, { json: true });
